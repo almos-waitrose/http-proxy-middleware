@@ -23,7 +23,7 @@ export class HttpProxyMiddleware<TReq, TRes> {
     this.proxyOptions = options;
 
     debug(`create proxy server`);
-    this.proxy = httpProxy.createProxyServer({});
+    this.proxy = httpProxy.createProxyServer(options);
 
     this.registerPlugins(this.proxy, this.proxyOptions);
 
